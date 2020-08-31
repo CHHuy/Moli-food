@@ -1,16 +1,16 @@
 .p-paginator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .p-paginator-left-content {
-	margin-right: auto;
+  margin-right: auto;
 }
 
 .p-paginator-right-content {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .p-paginator-page,
@@ -19,17 +19,17 @@
 .p-paginator-first,
 .p-paginator-prev,
 .p-paginator-current {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    user-select: none;
-    overflow: hidden;
-    position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+  overflow: hidden;
+  position: relative;
 }
 
 .p-paginator-element:focus {
-    z-index: 1;
-    position: relative;
+  z-index: 1;
+  position: relative;
 }

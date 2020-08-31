@@ -9,9 +9,9 @@ import {
   SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
-import { WCountriesService } from './w-countries.service';
-import { Observable, Subject } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import {WCountriesService} from './w-countries.service';
+import {Observable, Subject} from 'rxjs';
+import {map, takeUntil} from 'rxjs/operators';
 
 export class CountryModel {
   value: string;

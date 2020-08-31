@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { AutofocusInputDirective } from './autofocus.directive';
-import { ShowAuthedDirective } from './show-authed.directive';
-import { HrefDirective } from './href.directive';
-import { DropZoneDirective } from './drop-zone.directive';
-import { ButtonLoadingDirective } from './button-loading.directive';
-import { ButtonBackDirective } from './button-back.directive';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {AutofocusInputDirective} from './autofocus.directive';
+import {ShowAuthedDirective} from './show-authed.directive';
+import {HrefDirective} from './href.directive';
+import {DropZoneDirective} from './drop-zone.directive';
+import {ButtonLoadingDirective} from './button-loading.directive';
+import {ButtonBackDirective} from './button-back.directive';
 
 const directivesArr = [
   AutofocusInputDirective,

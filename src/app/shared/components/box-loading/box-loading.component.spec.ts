@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SharedBoxLoadingComponent } from './box-loading.component';
+import {SharedBoxLoadingComponent} from './box-loading.component';
 
 describe('SharedBoxLoadingComponent', () => {
   let component: SharedBoxLoadingComponent;

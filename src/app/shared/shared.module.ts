@@ -1,20 +1,20 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { ToastModule } from 'primeng/toast';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {ToastModule} from 'primeng/toast';
 
-import { SharedBoxLoadingComponent } from './components/box-loading/box-loading.component';
-import { SharedBoxNoDataComponent } from './components/box-nodata/box-nodata.component';
+import {SharedBoxLoadingComponent} from './components/box-loading/box-loading.component';
+import {SharedBoxNoDataComponent} from './components/box-nodata/box-nodata.component';
 
-import { SharedCardModule } from './components/card/card.module';
-import { SharedNavTabModule } from './components/nav-tab/nav-tab.module';
-import { SharedSplashScreenComponent } from './components/splash-screen/splash-screen.component';
-import { SharedTableModule } from './components/table/table.module';
+import {SharedCardModule} from './components/card/card.module';
+import {SharedNavTabModule} from './components/nav-tab/nav-tab.module';
+import {SharedSplashScreenComponent} from './components/splash-screen/splash-screen.component';
+import {SharedTableModule} from './components/table/table.module';
 
-import { DirectivesModule } from './directives/directives.module';
-import { PipesModule } from './pipes/pipes.module';
+import {DirectivesModule} from './directives/directives.module';
+import {PipesModule} from './pipes/pipes.module';
 
 const sharedComponents = [
   SharedBoxLoadingComponent,

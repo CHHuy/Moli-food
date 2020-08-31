@@ -79,17 +79,20 @@ Styleguide Components.collapse.accordion
     &:first-of-type {
       @include border-top-radius($card-border-radius);
     }
+
     &:last-of-type {
       @include border-bottom-radius($card-border-radius);
       border-bottom: $card-border-width solid $card-border-color;
     }
   }
+
   .card-header {
     margin: 0;
     padding: 0;
     border-bottom-width: 0;
     background-color: #f7f8fa;
     min-height: auto;
+
     .card-title {
       position: relative;
       margin: 0;
@@ -101,6 +104,7 @@ Styleguide Components.collapse.accordion
       font-size: 1.1rem;
       @include flexbox;
       @include align-items(center);
+
       > i {
         margin-right: 8px;
         font-size: 1.4rem;
@@ -165,20 +169,25 @@ Styleguide Components.collapse.accordion-light
   .card {
     background-color: transparent;
     border-width: 0;
+
     & + .card {
       border-top: $card-border-width solid $card-border-color;
     }
   }
+
   .card-header {
     background-color: transparent;
+
     .card-title {
       padding: 1rem 1rem 1rem 0;
       color: #a1abc3;
     }
+
     [aria-expanded="true"] {
       color: $brand;
     }
   }
+
   .card-body {
     padding: 0;
     margin-bottom: $card-spacer-y;
@@ -190,6 +199,7 @@ Styleguide Components.collapse.accordion-light
   .card-header {
     .card-title {
       padding-right: $card-spacer-x + 1.5rem;
+
       &:after {
         @include center(false, true);
         right: $card-spacer-x;
@@ -207,6 +217,7 @@ Styleguide Components.collapse.accordion-light
         content: fa-content($fa-var-chevron-right);
       }
     }
+
     [aria-expanded="true"] {
       &:after {
         content: fa-content($fa-var-chevron-down);
@@ -222,6 +233,7 @@ Styleguide Components.collapse.accordion-light
         content: fa-content($fa-var-plus);
       }
     }
+
     [aria-expanded="true"] {
       &:after {
         content: fa-content($fa-var-minus);

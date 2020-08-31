@@ -1,6 +1,6 @@
-import { Component, ContentChild, ElementRef, EventEmitter, HostBinding, Input, Output } from '@angular/core';
-import { BlockableUI } from '@shared/components/common/blockableui';
-import { NavTab } from '@shared/components/nav-tab/nav-tab';
+import {Component, ContentChild, ElementRef, EventEmitter, HostBinding, Input, Output} from '@angular/core';
+import {BlockableUI} from '@shared/components/common/blockableui';
+import {NavTab} from '@shared/components/nav-tab/nav-tab';
 
 @Component({
   selector: 'app-card-header',

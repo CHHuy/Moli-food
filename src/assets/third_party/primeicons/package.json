@@ -6,7 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/primefaces/primeicons.git"
   },
-  "keywords": ["Icon"],
+  "keywords": [
+    "Icon"
+  ],
   "author": "PrimeTek",
   "license": "MIT",
   "bugs": {

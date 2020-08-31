@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SharedSplashScreenComponent } from './splash-screen.component';
+import {SharedSplashScreenComponent} from './splash-screen.component';
 
 describe('SharedSplashScreenComponent', () => {
   let component: SharedSplashScreenComponent;
@@ -8,9 +8,9 @@ describe('SharedSplashScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SharedSplashScreenComponent ]
+      declarations: [SharedSplashScreenComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

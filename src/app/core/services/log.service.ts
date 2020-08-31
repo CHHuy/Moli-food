@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { NotifyService } from './notify.service';
+import {Injectable} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {NotifyService} from './notify.service';
 
 @Injectable({
   providedIn: 'root'

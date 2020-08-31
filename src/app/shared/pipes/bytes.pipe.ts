@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { utils } from '../utils/utils';
+import {Pipe, PipeTransform} from '@angular/core';
+import {utils} from '../utils/utils';
 
 export type ByteUnit = 'Byte' | 'KB' | 'MB' | 'GB' | 'TB';
 
@@ -9,11 +9,11 @@ export type ByteUnit = 'Byte' | 'KB' | 'MB' | 'GB' | 'TB';
 export class BytesPipe implements PipeTransform {
 
   static formats: { [key: string]: { max: number, prev?: ByteUnit } } = {
-    Byte: { max: 1024 },
-    KB: { max: Math.pow(1024, 2), prev: 'Byte' },
-    MB: { max: Math.pow(1024, 3), prev: 'KB' },
-    GB: { max: Math.pow(1024, 4), prev: 'MB' },
-    TB: { max: Number.MAX_SAFE_INTEGER, prev: 'GB' }
+    Byte: {max: 1024},
+    KB: {max: Math.pow(1024, 2), prev: 'Byte'},
+    MB: {max: Math.pow(1024, 3), prev: 'KB'},
+    GB: {max: Math.pow(1024, 4), prev: 'MB'},
+    TB: {max: Number.MAX_SAFE_INTEGER, prev: 'GB'}
   };
 
 

@@ -1,24 +1,24 @@
-import { HttpClient } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { CoreAppModule } from '@core/core.module';
-import { environment } from '@env/environment';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ErrorPageComponent } from '@pages/error-page/error-page.component';
-import { PagesComponent } from '@pages/pages.component';
-import { PartialsModule } from '@partials/partials.module';
-import { SharedAppModule } from '@shared/shared.module';
+import {HttpClient} from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {CoreAppModule} from '@core/core.module';
+import {environment} from '@env/environment';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {ErrorPageComponent} from '@pages/error-page/error-page.component';
+import {PagesComponent} from '@pages/pages.component';
+import {PartialsModule} from '@partials/partials.module';
+import {SharedAppModule} from '@shared/shared.module';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LayoutsModule } from './views/layouts/layouts.module';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {LayoutsModule} from './views/layouts/layouts.module';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,9 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ErrorPageComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     BrowserAnimationsModule,
     CoreAppModule,
     SharedAppModule,

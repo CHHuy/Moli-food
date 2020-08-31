@@ -1,5 +1,5 @@
-import { ElementRef, Injectable, Renderer2 } from '@angular/core';
-import { ScriptStore } from '@core/store/script.store';
+import {ElementRef, Injectable, Renderer2} from '@angular/core';
+import {ScriptStore} from '@core/store/script.store';
 
 @Injectable({
   providedIn: 'root'
@@ -48,8 +48,7 @@ export class UtilsService {
       //resolve if already loaded
       if (this.scripts[name].loaded) {
         resolve({script: name, loaded: true, status: 'Already Loaded'});
-      }
-      else {
+      } else {
         //load script
         let script: any = document.createElement('script');
         script.type = 'text/javascript';

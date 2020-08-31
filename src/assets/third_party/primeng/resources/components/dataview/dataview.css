@@ -1,11 +1,11 @@
 .p-dataview {
-    position: relative;
+  position: relative;
 }
 
 .p-dataview .p-dataview-loading-overlay {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }

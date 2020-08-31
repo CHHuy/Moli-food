@@ -1,4 +1,4 @@
-import { Injectable, Injector, ErrorHandler } from '@angular/core';
+import {Injectable, Injector, ErrorHandler} from '@angular/core';
 import {
   HttpEvent,
   HttpInterceptor,
@@ -6,8 +6,8 @@ import {
   HttpRequest,
   HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import {Observable} from 'rxjs';
+import {tap} from 'rxjs/operators';
 
 /** Passes HttpErrorResponse to application-wide error handler */
 @Injectable()

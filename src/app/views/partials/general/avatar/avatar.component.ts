@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { User } from '@core/interfaces/user';
+import {Component, Input, OnInit} from '@angular/core';
+import {User} from '@core/interfaces/user';
 
 @Component({
   selector: 'app-partials-avatar',

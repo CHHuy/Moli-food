@@ -1,0 +1,7 @@
+<h3>Merchant</h3>
+<ul>
+  <li *ngFor="let item of items | async">
+    <!--    {{ item | json }}-->
+    <a routerLink="items/{{item.id}}">{{ item.name }}</a>
+  </li>
+</ul>

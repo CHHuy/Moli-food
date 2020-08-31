@@ -167,10 +167,12 @@ Styleguide Components.cards.list-groups
   @include flexbox;
   @include align-items(center);
   min-height: calc(#{$input-line-height * 1em} + #{$input-padding-y * 2} + #{$input-height-border});
+
   small, .small {
     color: #a7abc3;
     padding-left: 8px;
   }
+
   i, .svg-inline--fa {
     color: #a7abc3;
     font-size: 1.3rem;
@@ -419,15 +421,19 @@ Styleguide Components.cards.tabbed-colors
   .nav-link {
     color: #6c7293;
   }
+
   .nav-tabs {
     border-bottom-width: 0;
     margin-bottom: -1px;
+
     .nav-item {
       margin-bottom: 0;
+
       & + .nav-item {
         margin-left: 20px;
       }
     }
+
     .nav-link {
       border-width: 0;
       border-radius: 0;
@@ -444,6 +450,7 @@ Styleguide Components.cards.tabbed-colors
       color: $brand;
     }
   }
+
   &.card-header-lg {
     .nav-tabs {
       .nav-link {
@@ -452,6 +459,7 @@ Styleguide Components.cards.tabbed-colors
       }
     }
   }
+
   &.card-header-sm {
     .nav-tabs {
       .nav-link {
@@ -460,6 +468,7 @@ Styleguide Components.cards.tabbed-colors
       }
     }
   }
+
   .nav-pills {
     .nav-item {
       & + .nav-item {
@@ -467,6 +476,7 @@ Styleguide Components.cards.tabbed-colors
       }
     }
   }
+
   &.card-header-lg {
     .nav-pills {
       .nav-link {
@@ -475,6 +485,7 @@ Styleguide Components.cards.tabbed-colors
       }
     }
   }
+
   &.card-header-sm {
     .nav-pills {
       .nav-link {
@@ -483,6 +494,7 @@ Styleguide Components.cards.tabbed-colors
       }
     }
   }
+
   @each $color, $value in $theme-colors {
     .nav-tabs-#{$color} {
       .nav-link.active,
@@ -587,8 +599,10 @@ Styleguide Components.cards.card-groups
 
 [class^="card-group"] {
   @include box-shadow(0px 0px 13px 0px rgba(82, 63, 105, 0.05));
+
   .card {
     box-shadow: none;
+
     & + .card {
       border-left: $card-border-width solid $card-border-color;
     }

@@ -16,6 +16,7 @@
   width: 26px;
   height: 26px;
   transition: all .4s ease;
+
   span {
     display: block;
     position: absolute;
@@ -29,6 +30,7 @@
     &, &:before, &:after {
       background-color: #FFFFFF;
     }
+
     &:before, &:after {
       position: absolute;
       display: block;
@@ -40,9 +42,11 @@
       border-radius: 2px;
       transition: all .4s ease;
     }
+
     &:before {
       top: -8px;
     }
+
     &:after {
       bottom: -8px;
     }

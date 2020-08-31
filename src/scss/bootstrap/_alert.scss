@@ -136,20 +136,24 @@ Styleguide Components.alerts.with-icons
 .alert-content {
   @include flexbox;
   @include align-items(stretch);
+
   .alert-icon {
     @include flexbox;
     @include align-items(center);
     font-size: 2.4rem;
     margin-right: 10px;
   }
+
   .alert-text {
     @include align-self(center);
     @include flex(1);
   }
+
   .alert-dismissible & {
     position: relative;
     margin-right: -($close-font-size + $alert-padding-x * 2);
     padding-right: $close-font-size + $alert-padding-x * 2;
+
     .close {
       @include center(false, true);
     }

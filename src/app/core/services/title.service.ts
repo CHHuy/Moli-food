@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRouteSnapshot } from '@angular/router';
-import { environment } from '@env/environment';
-import { TranslateService } from '@ngx-translate/core';
-import { BehaviorSubject } from 'rxjs';
-import { distinctUntilChanged, filter } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import {ActivatedRouteSnapshot} from '@angular/router';
+import {environment} from '@env/environment';
+import {TranslateService} from '@ngx-translate/core';
+import {BehaviorSubject} from 'rxjs';
+import {distinctUntilChanged, filter} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class TitleService {
     while (lastChild.children.length) {
       lastChild = lastChild.children[0];
     }
-    const { title } = lastChild.data;
+    const {title} = lastChild.data;
     const translate = lazyTranslateService || this.translateService;
     if (title) {
       translate

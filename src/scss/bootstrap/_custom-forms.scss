@@ -107,16 +107,19 @@ Styleguide Components.forms.custom-forms
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
   }
+
   &::-moz-range-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
   }
+
   &::-ms-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -153,6 +156,7 @@ Styleguide Components.forms.custom-forms
 .custom-control-label {
   cursor: pointer;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
+
   &::before, &::after {
     left: 0;
   }
@@ -265,11 +269,13 @@ Styleguide Components.forms.custom-forms-checkbox-radio
         background-color: $value;
         border-color: $value;
       }
+
       &:checked ~ .custom-control-label {
         &::before {
           background-color: $value;
           border-color: $value;
         }
+
         &::after {
           border-color: #ffffff;
         }
@@ -296,11 +302,13 @@ Styleguide Components.forms.custom-forms-checkbox-radio
         background-color: $custom-control-indicator-bg;
         border-color: $value;
       }
+
       &:checked ~ .custom-control-label {
         &::before {
           background-color: $custom-control-indicator-bg;
           border-color: $value;
         }
+
         &::after {
           border-color: $value;
         }
@@ -384,26 +392,31 @@ Styleguide Components.forms.custom-forms-switch
   & + .custom-switch {
     margin-top: 8px;
   }
+
   .custom-control-label {
     padding-left: $custom-switch-width + $custom-control-gutter;
     height: calc(#{$custom-switch-indicator-size} + #{$custom-control-indicator-border-width * 4});
     @include flexbox;
     @include align-items(center);
+
     &::before {
       left: 0;
       height: calc(#{$custom-switch-indicator-size} + #{$custom-control-indicator-border-width * 4});
     }
+
     &::after {
       left: $custom-control-indicator-border-width * 2;
       background-color: #fff;
     }
   }
+
   .custom-control-label::before,
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
   .custom-control-input:checked ~ .custom-control-label::before {
     background-color: lighten($custom-control-indicator-border-color, 15%);
     border-color: lighten($custom-control-indicator-border-color, 15%);
   }
+
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       background-color: $component-active-bg;
@@ -434,12 +447,14 @@ Styleguide Components.forms.custom-forms-switch
       background-color: $value;
       border-color: $value;
     }
+
     .custom-control-input ~ .custom-control-label {
       &::after {
         background-color: #ffffff;
         opacity: 0.4;
       }
     }
+
     .custom-control-input:checked ~ .custom-control-label {
       &::after {
         background-color: #ffffff;
@@ -454,10 +469,12 @@ Styleguide Components.forms.custom-forms-switch
       background-color: lighten($custom-control-indicator-border-color, 15%);
       border-color: $custom-control-indicator-border-color;
     }
+
     .custom-control-input:checked ~ .custom-control-label {
       &::before {
         background-color: #ffffff;
       }
+
       &::after {
         background-color: $value;
       }
@@ -517,16 +534,19 @@ Styleguide Components.forms.custom-forms-mega-options
 
 .custom-option {
   margin: 0;
+
   .custom-control-label {
     @include flexbox;
     @include flex-direction(column);
   }
+
   .custom-option-head {
     @include flexbox;
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: -2px;
   }
+
   .custom-option-body {
     margin-top: 5px;
     color: $text-muted;

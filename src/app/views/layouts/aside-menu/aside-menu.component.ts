@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MenuItem } from 'primeng/api';
-import { Constants } from '@core/configs/constants';
-import { AsideMenuService } from './aside-menu.service';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {MenuItem} from 'primeng/api';
+import {Constants} from '@core/configs/constants';
+import {AsideMenuService} from './aside-menu.service';
 
 @Component({
   selector: 'app-aside-menu',
@@ -12,7 +12,7 @@ import { AsideMenuService } from './aside-menu.service';
 export class AsideMenuComponent implements OnInit {
   items: MenuItem[];
 
-  constructor(public asideMenuService:AsideMenuService) {
+  constructor(public asideMenuService: AsideMenuService) {
 
   }
 

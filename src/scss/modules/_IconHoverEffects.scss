@@ -153,6 +153,7 @@
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     transition: color 0.3s;
+
     &:after {
       top: -($boder/2);
       left: -($boder/2);
@@ -174,8 +175,10 @@
 @mixin hi-icon-effect-3a($color, $color-hover) {
   & .hi-icon {
     color: $color;
+
     &:hover {
       color: $color-hover;
+
       &:after {
         @include opacity(0);
         @include transform(scale(1.3));
@@ -192,12 +195,15 @@
 @mixin hi-icon-effect-3b($color, $color-hover) {
   & .hi-icon {
     color: $color;
+
     &:after {
       @include opacity(0);
       @include transform(scale(1.3));
     }
+
     &:hover {
       color: $color-hover;
+
       &:after {
         @include opacity(1);
         @include transform(scale(1));

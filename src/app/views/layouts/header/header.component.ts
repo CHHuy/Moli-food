@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '@core/services/auth.service';
-import { TitleService } from '@core/services/title.service';
-import { AsideMenuService } from '../aside-menu/aside-menu.service';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '@core/services/auth.service';
+import {TitleService} from '@core/services/title.service';
+import {AsideMenuService} from '../aside-menu/aside-menu.service';
 
 @Component({
   selector: 'app-header',

@@ -7,9 +7,11 @@ Header
   display: block;
   background: $bg-linear-gradient;
   color: #ffffff;
+
   a {
     color: inherit;
   }
+
   &:after {
     content: '';
     display: block;

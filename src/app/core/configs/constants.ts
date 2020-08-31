@@ -20,7 +20,7 @@ export const Constants = {
   ],
 
   currencies: [
-    { label: 'USD', value: 'USD' }
+    {label: 'USD', value: 'USD'}
   ],
 
   table: {

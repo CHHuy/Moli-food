@@ -11,7 +11,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
 
 }
 
-(function($) {
+(function ($) {
   'use strict'
 
 
@@ -37,7 +37,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   # Smooth Scroll
   ===================================================*/
   function scrollToAnchor() {
-    $('.js-scroll-to').on('click', function(event) {
+    $('.js-scroll-to').on('click', function (event) {
       let $anchor = $(this)
       let headerH = '0'
       $('html, body')
@@ -56,10 +56,10 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   # Bootstrap Config
   ===================================================*/
   function bootstrapConfig() {
-    $(function() {
+    $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    $(function() {
+    $(function () {
       $('[data-toggle="popover"]').popover()
     })
   }
@@ -70,11 +70,11 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     bootstrapConfig()
   }
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     init()
   }) // end document ready function
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
   })
 
   // if ($('.x-toTop').length) {

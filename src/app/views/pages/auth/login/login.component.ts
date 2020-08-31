@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ErrorResponse } from '@core/interfaces/response';
-import { AuthService } from '@core/services/auth.service';
-import { Router } from '@angular/router';
-import { Constants } from '@core/configs/constants';
+import {Component, OnInit} from '@angular/core';
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ErrorResponse} from '@core/interfaces/response';
+import {AuthService} from '@core/services/auth.service';
+import {Router} from '@angular/router';
+import {Constants} from '@core/configs/constants';
 
 @Component({
   selector: 'app-login',
@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    const { email, password } = this.form.value;
+    const {email, password} = this.form.value;
 
 
     try {

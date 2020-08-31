@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { AsideMenuService } from './aside-menu.service';
+import {AsideMenuService} from './aside-menu.service';
 
 describe('AsideMenuService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

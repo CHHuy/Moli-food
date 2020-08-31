@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { DataResponse } from '@core/interfaces/response';
-import { ApiService } from '@core/services/api.service';
-import { BehaviorSubject } from 'rxjs';
-import { distinctUntilChanged, tap } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {DataResponse} from '@core/interfaces/response';
+import {ApiService} from '@core/services/api.service';
+import {BehaviorSubject} from 'rxjs';
+import {distinctUntilChanged, tap} from 'rxjs/operators';
 
 @Injectable()
 export class WCountriesService {

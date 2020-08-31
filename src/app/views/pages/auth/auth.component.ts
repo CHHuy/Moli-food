@@ -1,6 +1,6 @@
-import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
+import {Component, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
+import {Router} from '@angular/router';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-auth',

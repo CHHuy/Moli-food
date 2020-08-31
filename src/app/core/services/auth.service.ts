@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
-import { Constants } from '@core/configs/constants';
-import { User } from '@core/interfaces/user';
-import { NotifyService } from '@core/services/notify.service';
+import {Injectable} from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
+import {Router} from '@angular/router';
+import {Constants} from '@core/configs/constants';
+import {User} from '@core/interfaces/user';
+import {NotifyService} from '@core/services/notify.service';
 
 import * as firebase from 'firebase/app';
 
-import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import {Observable, of} from 'rxjs';
+import {switchMap} from 'rxjs/operators';
 
 
 @Injectable({
@@ -87,7 +87,7 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email, password)
       .then((credential) => {
         this.notify.update('Welcome to Firestarter!!!', 'success');
-        return this.updateUserData({ ...credential.user, displayName: name }); // if using firestore
+        return this.updateUserData({...credential.user, displayName: name}); // if using firestore
       })
       .catch((error) => this.handleError(error));
   }

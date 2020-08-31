@@ -413,19 +413,23 @@ Styleguide Components.buttons.icon-circle-only
   padding-left: 0;
   padding-right: 0;
   text-align: center;
+
   &.btn-sm {
     min-width: calc(#{$btn-line-height-sm * 1em} + #{$btn-padding-y-sm * 2} + #{$btn-border-width * 2});
     min-height: calc(#{$btn-line-height-sm * 1em} + #{$btn-padding-y-sm * 2} + #{$btn-border-width * 2});
   }
+
   &.btn-lg {
     min-width: calc(#{$btn-line-height-lg * 1em} + #{$btn-padding-y-lg * 2} + #{$btn-border-width * 2});
     min-height: calc(#{$btn-line-height-lg * 1em} + #{$btn-padding-y-lg * 2} + #{$btn-border-width * 2});
   }
+
   &.btn-circle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
   }
+
   &.btn-square {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;

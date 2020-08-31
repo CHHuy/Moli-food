@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { environment as env } from '@env/environment';
+import {environment as env} from '@env/environment';
 
 
 @Component({

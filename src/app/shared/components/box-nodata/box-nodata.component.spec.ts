@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SharedBoxNoDataComponent } from './box-nodata.component';
+import {SharedBoxNoDataComponent} from './box-nodata.component';
 
 describe('SharedBoxNoDataComponent', () => {
   let component: SharedBoxNoDataComponent;

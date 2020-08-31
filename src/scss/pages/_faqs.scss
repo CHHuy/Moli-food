@@ -1,5 +1,5 @@
 .ui-accordion {
-  .ui-accordion-header{
+  .ui-accordion-header {
     a {
       background-color: #EEEEEE;
       color: #212121;
@@ -18,8 +18,9 @@
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
   }
+
   p-accordiontab {
-    &+ p-accordiontab {
+    & + p-accordiontab {
       .ui-corner-all {
         margin-top: 8px;
       }

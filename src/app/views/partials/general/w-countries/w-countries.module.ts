@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DropdownModule } from 'primeng/dropdown';
-import { WCountriesService } from './w-countries.service';
-import { WCountriesComponent } from './w-countries.component';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {DropdownModule} from 'primeng/dropdown';
+import {WCountriesService} from './w-countries.service';
+import {WCountriesComponent} from './w-countries.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, DropdownModule],

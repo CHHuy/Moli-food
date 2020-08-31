@@ -71,14 +71,17 @@ $userpic-xl: 80px;
   background-size: cover;
   border-radius: $border-radius;
   vertical-align: middle;
+
   img, span {
     width: $userpic;
     height: $userpic;
     border-radius: $border-radius;
   }
+
   img {
     object-fit: cover;
   }
+
   span {
     @include flexbox;
     @include align-items(center);
@@ -87,43 +90,52 @@ $userpic-xl: 80px;
     background-color: theme-color('primary');
     color: #ffffff;
   }
+
   &.userpic-circle {
     img, span {
       border-radius: 50%;
     }
   }
+
   &.userpic-sm {
     img, span {
       width: $userpic-sm;
       height: $userpic-sm;
     }
+
     span {
       font-size: 0.8rem;
     }
   }
+
   &.userpic-md {
     img, span {
       width: $userpic-md;
       height: $userpic-md;
     }
+
     span {
       font-size: 1.3rem;
     }
   }
+
   &.userpic-lg {
     img, span {
       width: $userpic-lg;
       height: $userpic-lg;
     }
+
     span {
       font-size: 1.3rem;
     }
   }
+
   &.userpic-xl {
     img, span {
       width: $userpic-xl;
       height: $userpic-xl;
     }
+
     span {
       font-size: 1.7rem;
     }
@@ -141,6 +153,7 @@ $userpic-xl: 80px;
 
 .userpic {
   position: relative;
+
   .userpic-status {
     position: absolute;
     bottom: -3px;

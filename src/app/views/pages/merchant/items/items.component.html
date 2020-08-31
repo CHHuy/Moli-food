@@ -1,0 +1,30 @@
+<div class="merchant-menu mr-auto ml-auto">
+  <h3 *ngIf="merchant | async as merchantDetail">
+    {{ merchantDetail.name }}
+  </h3>
+</div>
+<!--<a routerLink="/">Back</a>-->
+<div *ngFor="let item of menuItems" class=" disabled" aria-disabled="true">
+  <div class="row">
+    <div class="col">
+      <div class="media">
+        <img src="..." class="align-self-center mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0">{{ item.name }}</h5>
+          <span>{{ item.price}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <p-inputNumber (ngModelChange)="onChangeNumber($event)" class="d-block" [(ngModel)]="item.quantity" [min]="0"
+                     [max]="100" [showButtons]="true"
+                     buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+                     decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
+                     incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
+      </p-inputNumber>
+    </div>
+  </div>
+</div>
+
+<hr>
+{{ totalQuantity }} - {{ totalPrice | currency: 'VND' }}

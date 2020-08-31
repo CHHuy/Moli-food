@@ -18,13 +18,13 @@ export const environment = {
     app: packageJson.version
   },
   firebaseConfig: {
-    apiKey: 'AIzaSyD6h91AYrTsn-a4eMFSVbbnQk38jdpDVAo',
-    authDomain: 'pwa-app-6924d.firebaseapp.com',
-    databaseURL: 'https://pwa-app-6924d.firebaseio.com',
-    projectId: 'pwa-app-6924d',
-    storageBucket: 'pwa-app-6924d.appspot.com',
-    messagingSenderId: '911866464392',
-    appId: '1:911866464392:web:c581cdd0849a223a'
+    apiKey: 'AIzaSyD1igxu50uDthyALgTgE1hfrqlMs1Y8iTo',
+    authDomain: 'moli-food.firebaseapp.com',
+    databaseURL: 'https://moli-food.firebaseio.com',
+    projectId: 'moli-food',
+    storageBucket: 'moli-food.appspot.com',
+    messagingSenderId: '683825652454',
+    appId: '1:683825652454:web:9e1130432c435a46ced127'
   }
 };
 

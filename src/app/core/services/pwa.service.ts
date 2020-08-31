@@ -1,8 +1,8 @@
-import { ApplicationRef, Injectable } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
-import { Observable, of, timer } from 'rxjs';
-import { fromPromise } from 'rxjs/internal-compatibility';
-import { catchError, first, mapTo, switchMap, timeout } from 'rxjs/operators';
+import {ApplicationRef, Injectable} from '@angular/core';
+import {SwUpdate} from '@angular/service-worker';
+import {Observable, of, timer} from 'rxjs';
+import {fromPromise} from 'rxjs/internal-compatibility';
+import {catchError, first, mapTo, switchMap, timeout} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

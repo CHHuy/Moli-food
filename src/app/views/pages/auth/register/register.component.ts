@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Constants } from '@core/configs/constants';
-import { ErrorResponse } from '@core/interfaces/response';
-import { AuthService } from '@core/services/auth.service';
-import { CustomValidators } from '@shared/validator/custom.validator';
+import {Component, OnInit} from '@angular/core';
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {Constants} from '@core/configs/constants';
+import {ErrorResponse} from '@core/interfaces/response';
+import {AuthService} from '@core/services/auth.service';
+import {CustomValidators} from '@shared/validator/custom.validator';
 
 @Component({
   selector: 'app-register',
@@ -104,7 +104,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    const { email, password, name } = this.form.value;
+    const {email, password, name} = this.form.value;
 
 
     try {

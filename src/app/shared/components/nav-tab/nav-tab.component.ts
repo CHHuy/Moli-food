@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavTab } from './nav-tab';
+import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
+import {Router} from '@angular/router';
+import {NavTab} from './nav-tab';
 
 @Component({
   selector: 'app-shared-nav-tab',

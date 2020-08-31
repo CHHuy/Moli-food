@@ -13,6 +13,7 @@ Content
   min-height: 100vh;
   @include flexbox;
   @include flex-direction(column);
+
   .main-content {
     @include flex(1);
   }
@@ -23,11 +24,13 @@ Content
       padding-right: 40px;
     }
   }
+
   .main-content {
     .container-fluid {
       margin-top: -$header-bottom/2;
     }
   }
+
   @include media-breakpoint-up(lg) {
     margin-left: $main-aside-width;
   }

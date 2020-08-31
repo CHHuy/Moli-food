@@ -1,16 +1,16 @@
 .p-accordion-header-link {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    position: relative;
-    text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+  text-decoration: none;
 }
 
 .p-accordion-header-link:focus {
-    z-index: 1;
+  z-index: 1;
 }
 
 .p-accordion-header-text {
-    line-height: 1;
+  line-height: 1;
 }

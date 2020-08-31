@@ -1,21 +1,26 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from '@core/services/auth.guard';
-import { ErrorPageComponent } from '@pages/error-page/error-page.component';
-import { PagesComponent } from '@pages/pages.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {AuthGuard} from '@core/services/auth.guard';
+import {ErrorPageComponent} from '@pages/error-page/error-page.component';
+import {PagesComponent} from '@pages/pages.component';
+import {MerchantComponent} from '@pages/merchant/merchant.component';
+import {ItemsComponent} from '@pages/merchant/items/items.component';
 
 
 const routes: Routes = [
   {path: 'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule)},
-
   {
     path: '',
     component: PagesComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/pages/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'merchant',
+        loadChildren: () => import('./views/pages/merchant/merchant.module').then(m => m.MerchantModule)
       },
       {
         path: 'error/403',

@@ -59,7 +59,7 @@ export default class Libs {
   static getDatesBetweenTwoDates(startDate: Date, endDate: Date) {
     const dates = [];
     let currentDate = startDate;
-    const addDays = function(days) {
+    const addDays = function (days) {
       const date = new Date(this.valueOf());
       date.setDate(date.getDate() + days);
       return date;

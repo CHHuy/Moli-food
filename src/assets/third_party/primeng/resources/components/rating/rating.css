@@ -1,7 +1,7 @@
 .p-rating-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .p-rating.p-rating-readonly .p-rating-icon {
-    cursor: default;
+  cursor: default;
 }

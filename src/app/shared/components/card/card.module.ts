@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {
   SharedCardComponent,
   SharedCardFooterComponent,
   SharedCardHeaderComponent
 } from './card.component';
-import { SharedNavTabModule } from '@shared/components/nav-tab/nav-tab.module';
+import {SharedNavTabModule} from '@shared/components/nav-tab/nav-tab.module';
 
 @NgModule({
   imports: [

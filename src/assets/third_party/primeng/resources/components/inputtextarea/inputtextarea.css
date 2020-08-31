@@ -1,8 +1,8 @@
 .p-inputtextarea-resizable {
-    overflow: hidden;
-    resize: none;
+  overflow: hidden;
+  resize: none;
 }
 
 .p-fluid .p-inputtextarea {
-    width: 100%;
+  width: 100%;
 }

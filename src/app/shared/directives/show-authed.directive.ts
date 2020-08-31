@@ -5,10 +5,10 @@ import {
   TemplateRef,
   ViewContainerRef
 } from '@angular/core';
-import { AuthService } from '@core/services/auth.service';
+import {AuthService} from '@core/services/auth.service';
 
 
-@Directive({ selector: '[appShowAuthed]' })
+@Directive({selector: '[appShowAuthed]'})
 export class ShowAuthedDirective implements OnInit {
   condition: boolean;
 
