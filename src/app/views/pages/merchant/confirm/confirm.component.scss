@@ -1,24 +1,27 @@
 @import "../../../../../scss/core";
 
-.confirm-header{
+.confirm-header {
   margin: 20px 0 30px 0;
   color: #000000;
-  .header-title{
+
+  .header-title {
     font-weight: bold;
   }
 }
-.table{
-  @include media-breakpoint-up(md){
-    width: 50%;
+
+.table {
+  @include media-breakpoint-up(md) {
     margin-left: auto;
     margin-right: auto;
   }
-  thead{
+
+  thead {
     font-size: 16px;
-    font-weight:bold;
+    font-weight: bold;
 
   }
-  tbody{
+
+  tbody {
     font-size: 14px;
   }
 }

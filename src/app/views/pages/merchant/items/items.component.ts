@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {DatePipe} from '@angular/common';
 import {HttpClient} from '@angular/common/http';
 import * as _ from 'lodash';
+import {AuthService} from '@core/services/auth.service';
 
 @Component({
   selector: 'app-items',
@@ -25,7 +26,9 @@ export class ItemsComponent implements OnInit {
 
   constructor(private firestore: AngularFirestore,
               private route: ActivatedRoute,
-              private datePipe: DatePipe, private http: HttpClient) {
+              private datePipe: DatePipe,
+              private http: HttpClient,
+              public auth: AuthService) {
     this.merchantId = this.route.snapshot.params.merchantId;
 
     this.merchant = this.firestore.doc(`merchant/${this.merchantId}`).valueChanges();
@@ -72,12 +75,13 @@ export class ItemsComponent implements OnInit {
     });
   }
 
-  async onSubmit() {
+  async onSubmit(user: any) {
     this.submitted = true;
     const res = await this.firestore.collection(`orders/${this.date}/items`).add({
       quantity: this.totalQuantity,
       totalPrice: this.totalPrice,
       details: this.orderDetails,
+      user
     });
   }
 
@@ -85,5 +89,9 @@ export class ItemsComponent implements OnInit {
     const data: any = await this.http.get('/assets/data/vinbon.json').toPromise();
     console.log(data);
     this.data = data.reply.menu_infos;
+  }
+
+  async onFacebookLogin() {
+    await this.auth.facebookLogin();
   }
 }

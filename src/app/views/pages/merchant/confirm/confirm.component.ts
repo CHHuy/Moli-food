@@ -3,6 +3,7 @@ import {DatePipe, formatNumber} from '@angular/common';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {pipe} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {AuthService} from '@core/services/auth.service';
 
 @Component({
   selector: 'app-confirm',
@@ -12,9 +13,10 @@ import {map} from 'rxjs/operators';
 export class ConfirmComponent implements OnInit {
   date: string;
   detailConfirm: any = [];
-
+  customers;
   constructor(private datePipe: DatePipe,
-              private afs: AngularFirestore) {
+              private afs: AngularFirestore,
+              public auth: AuthService) {
   }
 
   ngOnInit(): void {
@@ -48,5 +50,7 @@ export class ConfirmComponent implements OnInit {
           // console.log('result:', Object.keys(result));
         }
       );
+
+    this.customers = this.afs.collection(`orders/${this.date}/items`).valueChanges();
   }
 }

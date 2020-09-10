@@ -1,14 +1,14 @@
 {
   "targets": {
-    "pwa-app-6924d": {
+    "moli-food": {
       "hosting": {
         "angular-cli-seed": [
-          "pwa-app-6924d"
+          "moli-food"
         ]
       }
     }
   },
   "projects": {
-    "default": "pwa-app-6924d"
+    "default": "moli-food"
   }
 }

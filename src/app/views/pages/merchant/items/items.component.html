@@ -1,6 +1,6 @@
 <div class="menu-header text-center">
   <h3 *ngIf="merchant | async as merchantDetail" class="header-title">
-    Chào mừng [H] đến với quán <br> {{ merchantDetail.name }}
+    Chào mừng bạn đến với quán <br> {{ merchantDetail.name }}
   </h3>
 </div>
 <!--<a routerLink="/">Back</a>-->
@@ -32,7 +32,6 @@
                 </div>
                 <div class="media-right">
                   <div class="text-right">
-                    {{dish.quantity}}
                     <strong class="d-block">{{ dish.discount_price.text }}</strong>
                     <del class="small">{{ dish.price.text }}</del>
                   </div>
@@ -61,25 +60,36 @@
         <thead>
         <tr>
           <th>SL</th>
-          <th>Ten</th>
-          <th class="text-right">Gia</th>
+          <th>Tên món</th>
+          <th class="text-right">Giá</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of orderDetails">
-          <td scope="row">{{ item.quantity }}</td>
-          <td>{{ item.name }}</td>
-          <td class="text-right">{{ item.price * item.quantity | currency: 'VND' }}</td>
-        </tr>
+        <ng-container *ngFor="let item of orderDetails">
+          <tr *ngIf="item.quantity > 0">
+            <td scope="row">{{ item.quantity }}</td>
+            <td>{{ item.name }}</td>
+            <td class="text-right">{{ item.price * item.quantity | currency: 'VND' }}</td>
+          </tr>
+        </ng-container>
         <tr>
           <td colspan="2">Tổng cộng</td>
           <td class="text-right">{{ totalPrice | currency: 'VND' }}</td>
         </tr>
         </tbody>
       </table>
-      <button [disabled]="submitted" (click)="onSubmit()"
-              class="btn btn-primary btn-block" type="button">Đặt ngay
-      </button>
+      <div *ngIf="auth.currentUser | async as user;else templateNoLogin">
+        <p>Đơn hàng tạo bởi <span>{{ user.displayName }}</span></p>
+        <button [disabled]="submitted" (click)="onSubmit(user)"
+                class="btn btn-success btn-block" type="button">Đặt ngay
+        </button>
+      </div>
+      <ng-template #templateNoLogin>
+        <button (click)="onFacebookLogin()" class="btn btn-primary btn-block" type="button">
+          Login with Facebook
+        </button>
+      </ng-template>
+
     </div>
   </div>
   <!-- <div *ngFor="let item of menuItems" class="disabled menu-body" aria-disabled="true">

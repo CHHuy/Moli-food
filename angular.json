@@ -47,7 +47,8 @@
               "@firebase/storage",
               "@firebase/performance",
               "@firebase/remote-config",
-              "@firebase/util"
+              "@firebase/util",
+              "lodash"
             ]
           },
           "configurations": {
