@@ -1,0 +1,24 @@
+<h3 class="payment-header text-center header-title">Kiểm tra thanh toán</h3>
+
+<div class="payment-body">
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Tên KH</th>
+      <th scope="col">Món</th>
+      <th scope="col">Số lượng</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.itemtotalPrice }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngFor="let order of orders">
+  {{order.id}}
+</div>

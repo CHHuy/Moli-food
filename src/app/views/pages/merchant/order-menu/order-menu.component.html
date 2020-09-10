@@ -1,0 +1,30 @@
+<p>order-menu works!</p>
+<dl>
+  <ng-container *ngFor="let item of data">
+    <dt>{{ item.dish_type_name }}</dt>
+    <dd class="pl-3">
+      <ul class="list-unstyled">
+        <li *ngFor="let dish of item.dishes" class="media mb-3" [ngClass]="{'disabled': !dish.is_active}">
+          <a class="d-flex mr-3" href="#">
+            <img [src]="dish.photos[0].value" alt="">
+          </a>
+          <div class="media-body">
+            <h5>{{ dish.name }}</h5>
+            {{ dish.description }}
+            <p-inputNumber
+              buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+              decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
+              incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"
+              (ngModelChange)="onChangeNumber($event)" class="d-block mt-3" [(ngModel)]="dish.quantity" [min]="0"
+              [max]="100" [showButtons]="true">
+            </p-inputNumber>
+          </div>
+          <div class="media-right text-right">
+            <del class="small">{{ dish.price.text }}</del>
+            <div>{{ dish.discount_price.text }}</div>
+          </div>
+        </li>
+      </ul>
+    </dd>
+  </ng-container>
+</dl>

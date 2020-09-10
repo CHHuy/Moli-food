@@ -2,4 +2,8 @@ body {
   .p-inputnumber {
     @include flexbox;
   }
+
+  .p-inputnumber-input {
+    text-align: center;
+  }
 }

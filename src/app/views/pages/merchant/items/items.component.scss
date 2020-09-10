@@ -1,0 +1,88 @@
+@import "../../../../../scss/core";
+
+.jumbotron-custom {
+  margin-top: 20px;
+
+  .bill {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.menu-header {
+  margin: 20px 0 30px 0;
+  font-weight: bold;
+  color: #000000;
+
+  .header-title {
+    font-weight: bold;
+  }
+}
+
+.media {
+  .media-body {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .media-bottom {
+    @include flexbox();
+    @include align-items(flex-end);
+
+    .item-price {
+      width: 130px;
+
+    }
+  }
+
+}
+
+.menu-body {
+  p-inputNumber {
+    padding: 10px;
+  }
+}
+
+dt {
+  padding: 15px 10px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-content {
+  @include flexbox();
+  @include justify-content(flex-start);
+
+  .aside {
+    width: 250px;
+
+    .aside-box-text {
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .aside-box-item {
+      margin-bottom: 5px;
+    }
+  }
+
+  .aside-order {
+    width: 250px;
+  }
+
+  .content {
+    @include flex(1);
+    margin: 0 15px;
+  }
+}
+
+.list-unstyled {
+  .item-img {
+
+    @include media-breakpoint-down(sm) {
+      height: 60px;
+    }
+  }
+}

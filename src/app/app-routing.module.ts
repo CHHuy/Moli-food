@@ -15,13 +15,13 @@ const routes: Routes = [
     // canActivate: [AuthGuard],
     children: [
       {
-        path: 'dashboard',
-        loadChildren: () => import('./views/pages/dashboard/dashboard.module').then(m => m.DashboardModule)
-      },
-      {
-        path: 'merchant',
+        path: '',
         loadChildren: () => import('./views/pages/merchant/merchant.module').then(m => m.MerchantModule)
       },
+      // {
+      //   path: 'dashboard',
+      //   loadChildren: () => import('./views/pages/dashboard/dashboard.module').then(m => m.DashboardModule)
+      // },
       {
         path: 'error/403',
         component: ErrorPageComponent,

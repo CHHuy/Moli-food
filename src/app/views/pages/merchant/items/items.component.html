@@ -1,30 +1,115 @@
-<div class="merchant-menu mr-auto ml-auto">
-  <h3 *ngIf="merchant | async as merchantDetail">
-    {{ merchantDetail.name }}
+<div class="menu-header text-center">
+  <h3 *ngIf="merchant | async as merchantDetail" class="header-title">
+    Chào mừng [H] đến với quán <br> {{ merchantDetail.name }}
   </h3>
 </div>
 <!--<a routerLink="/">Back</a>-->
-<div *ngFor="let item of menuItems" class=" disabled" aria-disabled="true">
-  <div class="row">
-    <div class="col">
-      <div class="media">
-        <img src="..." class="align-self-center mr-3" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">{{ item.name }}</h5>
-          <span>{{ item.price}}</span>
-        </div>
+<div class="main-content">
+  <aside class="aside">
+    <div class="aside-box sticky-top">
+      <div class="aside-box-title">
+        <h4 class="aside-box-text">Phân loại</h4>
+      </div>
+      <div class="aside-box-item" *ngFor="let item of data">
+        <a href="/items/{{merchantId}}#{{ item.dish_type_name }}">{{ item.dish_type_name }}</a>
       </div>
     </div>
-    <div class="col-auto">
-      <p-inputNumber (ngModelChange)="onChangeNumber($event)" class="d-block" [(ngModel)]="item.quantity" [min]="0"
-                     [max]="100" [showButtons]="true"
-                     buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
-                     decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
-                     incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-      </p-inputNumber>
+  </aside>
+  <div class="content">
+    <dl *ngIf="!submitted">
+      <ng-container *ngFor="let item of data">
+        <dt id="{{ item.dish_type_name }}">{{ item.dish_type_name }}</dt>
+        <dd class="pl-3">
+          <div class="list-group">
+            <div *ngFor="let dish of item.dishes" class="list-group-item list-group-item-action">
+              <div class="media">
+                <div class="d-flex mr-2">
+                  <img width="85" [src]="dish.photos[0].value" alt="" class="item-img">
+                </div>
+                <div class="media-body">
+                  <h5>{{ dish.name }}</h5>
+                  {{ dish.description }}
+                </div>
+                <div class="media-right">
+                  <div class="text-right">
+                    {{dish.quantity}}
+                    <strong class="d-block">{{ dish.discount_price.text }}</strong>
+                    <del class="small">{{ dish.price.text }}</del>
+                  </div>
+                  <div style="width: 100px;" class="text-center">
+                    <p-inputNumber
+                      buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+                      decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
+                      incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"
+                      (ngModelChange)="onChangeNumber($event, dish)" class="d-block mt-3" [(ngModel)]="dish.quantity"
+                      [min]="0"
+                      [max]="100" [showButtons]="true">
+                    </p-inputNumber>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </dd>
+      </ng-container>
+    </dl>
+  </div>
+  <div class="aside-order">
+    <div class="sticky-top">
+      <h4>Order</h4>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>SL</th>
+          <th>Ten</th>
+          <th class="text-right">Gia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of orderDetails">
+          <td scope="row">{{ item.quantity }}</td>
+          <td>{{ item.name }}</td>
+          <td class="text-right">{{ item.price * item.quantity | currency: 'VND' }}</td>
+        </tr>
+        <tr>
+          <td colspan="2">Tổng cộng</td>
+          <td class="text-right">{{ totalPrice | currency: 'VND' }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <button [disabled]="submitted" (click)="onSubmit()"
+              class="btn btn-primary btn-block" type="button">Đặt ngay
+      </button>
     </div>
   </div>
+  <!-- <div *ngFor="let item of menuItems" class="disabled menu-body" aria-disabled="true">
+     <div class="row mb-4 mt-4" *ngIf="!submitted">
+       <div class="col-md-9 col-sm-12">
+         <div class="media">
+           <img src="..." class="align-self-center mr-3" alt="...">
+           <div class="media-body">
+             <h5 class="mt-0">{{ item.name }}</h5>
+             <span>{{item.price | currency: 'VND'}}</span>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-3 col-sm-12">
+         <p-inputNumber
+           buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+           decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
+           incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"
+           (ngModelChange)="onChangeNumber($event)" class="d-block" [(ngModel)]="item.quantity" [min]="0"
+           [max]="100" [showButtons]="true">
+         </p-inputNumber>
+       </div>
+     </div>
+   </div>-->
+</div>
+<div *ngIf="submitted" class="jumbotron jumbotron-custom">
+  <h1 class="display-3">Thành công</h1>
+  <p class="lead">Cảm ơn bạn đã gửi đơn</p>
+  <hr class="my-2">
+  <p class="bill">Tổng sản phẩm: {{ totalQuantity }}</p>
+  <p class="bill">Tổng tiền: {{ totalPrice | currency: 'VND' }}</p>
 </div>
 
-<hr>
-{{ totalQuantity }} - {{ totalPrice | currency: 'VND' }}
