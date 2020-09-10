@@ -6,6 +6,8 @@ import {HttpClient} from '@angular/common/http';
 import * as _ from 'lodash';
 import {AuthService} from '@core/services/auth.service';
 
+
+
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -23,7 +25,11 @@ export class ItemsComponent implements OnInit {
   totalQuantity = 0;
 
   date: string;
+  display: boolean = false;
 
+  showDialog() {
+    this.display = true;
+  }
   constructor(private firestore: AngularFirestore,
               private route: ActivatedRoute,
               private datePipe: DatePipe,
