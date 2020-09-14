@@ -16,10 +16,15 @@
     </div>
   </aside>
   <div class="content">
+    <div class="form-group sticky-top">
+      <select (change)="scrollToEl($event)" class="form-control" name="" id="">
+        <option *ngFor="let item of data" [ngValue]="item.dish_type_name">{{ item.dish_type_name }}</option>
+      </select>
+    </div>
     <dl *ngIf="!submitted">
       <ng-container *ngFor="let item of data">
         <dt id="{{ item.dish_type_name }}">{{ item.dish_type_name }}</dt>
-        <dd class="pl-3">
+        <dd>
           <div class="list-group">
             <div *ngFor="let dish of item.dishes" class="list-group-item list-group-item-action">
               <div class="media">

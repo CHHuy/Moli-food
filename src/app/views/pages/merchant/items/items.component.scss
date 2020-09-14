@@ -44,7 +44,7 @@
 }
 
 dt {
-  padding: 15px 10px;
+  padding: 15px 10px 15px 0;
   color: #000000;
   font-size: 16px;
   font-weight: bold;
@@ -75,6 +75,15 @@ dt {
   .content {
     @include flex(1);
     margin: 0 15px;
+    .form-group{
+      .form-control{
+        @include media-breakpoint-up(lg){
+          display: none;
+        }
+        font-weight: bold;
+
+      }
+    }
   }
 }
 .item-img {
@@ -106,4 +115,8 @@ dt {
   font-size: 18px; /* Increase font size */
   background-color: #1dc9b7;
   color: #ffffff;
+}
+
+.sticky-top{
+  top: 10px;
 }

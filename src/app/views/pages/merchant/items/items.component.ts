@@ -7,7 +7,6 @@ import * as _ from 'lodash';
 import {AuthService} from '@core/services/auth.service';
 
 
-
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -30,6 +29,7 @@ export class ItemsComponent implements OnInit {
   showDialog() {
     this.display = true;
   }
+
   constructor(private firestore: AngularFirestore,
               private route: ActivatedRoute,
               private datePipe: DatePipe,
@@ -99,5 +99,15 @@ export class ItemsComponent implements OnInit {
 
   async onFacebookLogin() {
     await this.auth.facebookLogin();
+  }
+
+  scrollToEl(event: any) {
+    const id = event.target.value;
+    const elmnt = document.getElementById(id);
+    // console.log(elmnt);
+    elmnt.scrollIntoView();
+    // elmnt.scrollTop = elmnt.offsetTop;
+
+    // document.querySelector(`#${id}`).scrollIntoView({behavior: 'smooth'});
   }
 }
