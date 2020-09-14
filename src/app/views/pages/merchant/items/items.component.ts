@@ -36,7 +36,6 @@ export class ItemsComponent implements OnInit {
               private http: HttpClient,
               public auth: AuthService) {
     this.merchantId = this.route.snapshot.params.merchantId;
-
     this.merchant = this.firestore.doc(`merchant/${this.merchantId}`).valueChanges();
     /*    this.firestore.collection(`merchant/${this.merchantId}/items`).valueChanges({idField: 'id'}).subscribe(
           (res: any) => {
@@ -55,7 +54,7 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
     const date = Date.now();
     this.date = this.datePipe.transform(date, 'dd-MM-yyyy');
-    this.getData();
+    this.getData(this.merchantId);
   }
 
   onChangeNumber(event: any, item: any) {
@@ -91,8 +90,8 @@ export class ItemsComponent implements OnInit {
     });
   }
 
-  async getData() {
-    const data: any = await this.http.get('/assets/data/vinbon.json').toPromise();
+  async getData(name: string) {
+    const data: any = await this.http.get(`/assets/data/${name}.json`).toPromise();
     console.log(data);
     this.data = data.reply.menu_infos;
   }

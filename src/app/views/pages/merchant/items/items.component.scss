@@ -75,32 +75,34 @@ dt {
   .content {
     @include flex(1);
     margin: 0 15px;
-    .form-group{
-      .form-control{
-        @include media-breakpoint-up(lg){
-          display: none;
-        }
-        font-weight: bold;
 
+    .form-group {
+      @include media-breakpoint-up(lg) {
+        display: none;
       }
+      font-weight: bold;
     }
   }
 }
+
 .item-img {
-    height: 85px;
+  height: 85px;
 }
-.aside{
-  @include media-breakpoint-down(md){
+
+.aside {
+  @include media-breakpoint-down(md) {
     display: none;
   }
 }
-.aside-order{
-  @include media-breakpoint-down(md){
+
+.aside-order {
+  @include media-breakpoint-down(md) {
     display: none;
   }
 }
-.order-btn{
-  @include media-breakpoint-up(lg){
+
+.order-btn {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
   position: fixed; /* Fixed/sticky position */
@@ -117,6 +119,6 @@ dt {
   color: #ffffff;
 }
 
-.sticky-top{
+.sticky-top {
   top: 10px;
 }

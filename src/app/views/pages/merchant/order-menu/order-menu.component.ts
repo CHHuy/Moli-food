@@ -17,7 +17,7 @@ export class OrderMenuComponent implements OnInit {
     this.getData();
   }
   async getData() {
-    const data: any = await this.http.get('/assets/data/vinbon.json').toPromise();
+    const data: any = await this.http.get('/assets/data/an-vat-vinbon.json').toPromise();
     console.log(data);
     this.data = data.reply.menu_infos;
   }
