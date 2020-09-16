@@ -4,18 +4,24 @@
     {{this.date}}
   </h3>
 </div>
-
 <table class="table">
   <thead class="thead-dark">
   <tr>
     <th scope="col">Món</th>
     <th scope="col" class="text-center">Số lượng</th>
+    <th scope="col" class="text-center">Giá</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of detailConfirm">
     <td>{{ item[0] }}</td>
     <td class="text-center">{{ item[1] }}</td>
+    <td class="text-center">{{ item[2] | currency: 'VND' }}</td>
+  </tr>
+  <tr>
+    <td class="">Tổng cộng</td>
+    <td class="text-center">{{ totalItems }}</td>
+    <td class="text-center">{{ totalSum | currency: 'VND' }}</td>
   </tr>
   </tbody>
 </table>
@@ -25,12 +31,12 @@
   <tr>
     <th scope="col">Người đặt</th>
     <th scope="col">Chi Tiết</th>
-    <th scope="col"  class="text-center">Tổng tiền</th>
+    <th scope="col" class="text-center">Tổng tiền</th>
   </tr>
   </thead>
   <tbody>
   <ng-container *ngFor="let customer of customers | async">
-    <tr *ngIf="customer.quantity > 0">
+    <tr *ngIf="customer.totalQuantity > 0">
       <td>
         <img width="32" class="rounded-circle" [src]="customer.user.photoURL" alt=""> {{ customer.user.displayName }}
       </td>

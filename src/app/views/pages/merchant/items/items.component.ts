@@ -83,7 +83,7 @@ export class ItemsComponent implements OnInit {
   async onSubmit(user: any) {
     this.submitted = true;
     const res = await this.firestore.collection(`orders/${this.date}/items`).add({
-      quantity: this.totalQuantity,
+      totalQuantity: this.totalQuantity,
       totalPrice: this.totalPrice,
       details: this.orderDetails,
       user

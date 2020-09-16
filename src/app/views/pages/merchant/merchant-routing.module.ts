@@ -8,7 +8,6 @@ import {OrderMenuComponent} from './order-menu/order-menu.component';
 
 const routes: Routes = [
   {path: '', component: MerchantComponent},
-  {path: 'admin', component: AdminComponent},
   {path: 'order-menu', component: OrderMenuComponent},
   {path: 'confirm', component: ConfirmComponent},
   {path: 'items/:merchantId', component: ItemsComponent}
