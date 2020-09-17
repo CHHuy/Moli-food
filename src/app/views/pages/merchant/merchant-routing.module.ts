@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: '', component: MerchantComponent},
   {path: 'order-menu', component: OrderMenuComponent},
   {path: 'confirm', component: ConfirmComponent},
+  // {path: 'admin', component: AdminComponent},
   {path: 'items/:merchantId', component: ItemsComponent}
 ];
 

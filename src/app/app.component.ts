@@ -1,10 +1,10 @@
-import {isPlatformBrowser} from '@angular/common';
-import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
-import {NavigationEnd, NavigationError, NavigationStart, Router, RouterEvent} from '@angular/router';
-import {AuthService} from '@core/services/auth.service';
-import {TitleService} from '@core/services/title.service';
-import {TranslateService} from '@ngx-translate/core';
-import {SwUpdate} from '@angular/service-worker';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { NavigationEnd, NavigationError, NavigationStart, Router, RouterEvent } from '@angular/router';
+import { AuthService } from '@core/services/auth.service';
+import { TitleService } from '@core/services/title.service';
+import { TranslateService } from '@ngx-translate/core';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -20,12 +20,12 @@ export class AppComponent implements OnInit {
     private auth: AuthService,
     private router: Router,
     private titleService: TitleService,
-    private translateService: TranslateService,
+    private translateService: TranslateService
   ) {
     this.updates.available.subscribe(() => {
-      if (confirm('New version available. Load New Version?')) {
-        updates.activateUpdate().then(() => document.location.reload());
-      }
+      // if (confirm('New version available. Load New Version?')) {
+      updates.activateUpdate().then(() => document.location.reload());
+      // }
     });
     // this language will be used as a fallback when a translation isn't found in the current language
     this.translateService.setDefaultLang('en');
